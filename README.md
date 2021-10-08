@@ -8,6 +8,8 @@ Your project description goes here. What problem did you solve? How did you solv
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
+A TO-DO LIST ABOUT MY TO-DO LIST
+
 TIME FRAME
 ===
 
@@ -18,17 +20,17 @@ PHASE ONE: Basic Setup
 ===
 
 - git init
-- npm init
+- npm init --y
 - npm install express pg, update start scripts "start": "node server/server.js"
 - spin up server
     requires (express, app, bodyparser)
     uses (static files, bodyparser)
     globals (const port)
     spin up server (app.listen)
-    routes
-- serve index.html/scripts/styles/vendors
+- serve index.html/scripts/styles/vendors within a public file within the server file
 - source scripts in html
-- .gitignore .DS_Store and one other one, check to see what it is?
+- .gitignore .DS_Store and node_modules
+- test the server
 - git commit
 
 PHASE TWO: Adding database connection

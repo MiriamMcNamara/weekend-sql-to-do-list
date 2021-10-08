@@ -21,6 +21,18 @@ app.listen( port, ()=>{
 
 
 // routes
+app.get( '/todo', (req, res)=>{
+    console.log( 'GET route hit');
+    let queryString = 'SELECT * FROM to_do';
+    pool.query( queryString ).then( (results)=>{
+        console.log( results.rows );
+        res.send( results.rows )
+    }).catch( (err)=>{
+        res.sendStatus( 500 );
+    })
+});
+
+
 app.post( '/todo', ( req, res )=>{
     console.log( 'POST route hit', req.body )
     let queryString = 'INSERT INTO to_do ( item, completed) VALUES ( $1, $2 )';

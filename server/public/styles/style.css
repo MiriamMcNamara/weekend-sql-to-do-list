@@ -3,3 +3,37 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
+
+#headerDiv {
+    border-style: solid;
+    border-width: 10px;
+    border-color: black;
+    margin-bottom: 10px;
+}
+
+#inputDiv {
+    padding-bottom: 30px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black; 
+}
+
+table {
+    padding-bottom: 30px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black; 
+   /*why won't table align center?*/
+}
+
+#taskHeader {
+    padding-left: 5cm;
+    padding-right: 5cm;
+}
+
+th {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black; 
+    align-items: center;
+}

@@ -1,6 +1,6 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Mimi's Spectacular Digital To-Do List!
 
 ## Description
 
@@ -14,6 +14,11 @@ TIME FRAME
 ===
 
 - Hoping to get the base mode completed by Saturday. I'll have 3-4 hours each day. I would love to spend Monday exploring Bootstrap, branching, and other stretch goals.
+
+PHASE ZERO
+===
+
+- spend some time creating an epic to-do list about my to-do list to get organized and prioritize
 
 PHASE ONE: Basic Setup
 (I'd like to do all of this without copy/pasting so that I can get the placement of everything in my head a little better)
@@ -33,7 +38,7 @@ PHASE ONE: Basic Setup
 - test the server
 - git commit
 
-PHASE TWO: Adding database connection
+PHASE TWO: Adding database and connection
 ===
 
 - make sure you've npm installed pg

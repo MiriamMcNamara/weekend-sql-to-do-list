@@ -37,11 +37,11 @@ PHASE TWO: Adding database connection
 ===
 
 - make sure you've npm installed pg
-- create a "pool.js" module in the server folder
-- create a database for the project.  Use the name `weekend-to-do-app`. It will need a primary key serial number, a text task, and a 'completed' boolean.
+- create a "pool.js" in a modules folder in the server folder
 - require pg
-- make sure to export it ex: ```module.exports = testFunction```
-- require it on the server ex: ```const simple = ( './modules/simple' );```
+- make sure to export it ex: ```module.exports = pool```
+- require it on the server ex: ```const pool = require( './modules/pool' );```
+- create a database for the project.  Use the name `weekend-to-do-app`. It will need a primary key serial number, a text task, and a 'completed' boolean.
 - make a database.sql file that includes all of your `CREATE TABLE` queries so instructors can re-create your database while testing your app.
 - git commit
 

@@ -1,8 +1,8 @@
 // requires (express, app, bodyparser, modules)
 const express = require( 'express' );
 const app = express();
-const bodyParser = require( 'body-parser' )
-
+const bodyParser = require( 'body-parser' );
+const pool = require( './modules/pool' );
 
 // uses (static files, bodyparser)
 app.use( express.static( 'server/public' ) );

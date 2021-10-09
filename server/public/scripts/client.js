@@ -4,6 +4,7 @@ function onReady(){
     getTasks();
     $( `#addTaskButton` ).on( 'click', addTask );
     $( `#viewTasks` ).on( 'click', `.deleteButton`, deleteTask );
+    $( `#viewTasks` ).on( 'click', `.uncompleteButton`, completeTask);
 };
 
 function addTask(){
@@ -30,6 +31,18 @@ function addTask(){
 
 }; //end addTask
 
+function completeTask(){
+    console.log( 'in complete task' );
+    $.ajax({
+        method: 'PUT',
+        url: '/todo?id=' + $( this ).data( 'id' )
+    }).then(function (response){
+        getTasks();
+    }).catch(function (err){
+        console.log( 'problem updating task!', err )
+    })
+}; //end completeTask
+
 function deleteTask(){
     console.log( 'in deleteTask', $( this ).data( 'id' ) );
 //create a function that sends an AJAX DELETE 
@@ -55,12 +68,21 @@ function getTasks(){
       //loop through response
       //display in the table on the DOM
       for( let i=0; i<response.length; i++){
+          if( response[i].completed === false ){
           el.append( `<tr>
                         <td>${response[i].id}</td>
-                        <td><input type="checkbox"></td>
-                        <td>${response[i].item}</td>
+                        <td><button data-id='${response[i].id}' class="uncompleteButton"><img class="no" src="./images/no.png"/></button></td>
+                        <td class="taskToComplete">${response[i].item}</td>
                         <td><button data-id='${response[i].id}' class="deleteButton">Delete</button></td>
-                    </tr>`);
+                    </tr>`)}
+        else{
+            el.append( `<tr>
+                        <td>${response[i].id}</td>
+                        <td><button data-id='${response[i].id}' class="completeButton"><img class="yay" src="./images/yay.jpg"/></button></td>
+                        <td class="taskCompleted">${response[i].item}</td>
+                        <td><button data-id='${response[i].id}' class="deleteButton">Delete</button></td>
+                    </tr>`)
+        }
     }}).catch( function( err ){
         console.log( 'problem getting tasks!', err )
     })}; //end getTasks

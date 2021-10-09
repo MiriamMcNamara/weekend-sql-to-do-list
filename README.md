@@ -63,12 +63,12 @@ PHASE THREE: Interface/GET/POST
 
 PHASE FOUR: Complete (update) function/Toggle class
 ===
-- When a Task is complete, its visual representation should change on the front end. The complete option should be  'checked off'. Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete.
-- text color & or background color of tasks *to show whether or not they have been completed*
-- a checkmark put in like Amanda's pencils in Koala Holla could be cute, along with a color change? Or look into HTML checkbox function?
-- put more thought into the specifics of what this looks like :)
-- capture the click ( dynamically created ) and run a function where a class or two is toggled and an AJAX PUT req is sent to the server that updates the boolean in the database
-- does it need to un-complete if user clicks it again?
+- When a Task is complete, its visual representation should change on the front end. The complete option should be  'checked off'. I want the completed button to change from one image to another. This will happen with some classes and an if/else statement when appending to the DOM.
+- text color change as well? crossed out using text decoration in CSS
+- capture the click ( dynamically created )
+- run a function where an AJAX PUT req is sent to the server using this data id. 
+- in the server, use SQL to update the boolean in the database. Use the koala repo as reference for this since I wasn't there for this during the group project.
+- does it need to un-complete if user clicks it again? Or, since it's a to-do list, prob not. my checklists on iphone only go one way
 - git commit
 
 PHASE FIVE: Delete function

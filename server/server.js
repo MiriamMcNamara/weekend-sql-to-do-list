@@ -36,7 +36,7 @@ app.delete( '/todo', ( req, res )=>{
 
 app.get( '/todo', (req, res)=>{
     console.log( 'GET route hit');
-    let queryString = 'SELECT * FROM to_do';
+    let queryString = 'SELECT * FROM to_do ORDER BY id ASC';
     pool.query( queryString ).then( (results)=>{
         console.log( results.rows );
         res.send( results.rows )
@@ -54,4 +54,17 @@ app.post( '/todo', ( req, res )=>{
     res.sendStatus( 201 )
 }).catch((err)=>{
     res.sendStatus( 500 )})
+});
+
+app.put( '/todo', ( req, res )=>{
+    console.log( 'PUT route hit', req.query );
+    const queryString = `UPDATE to_do SET completed=true WHERE id='${req.query.id}'`;
+
+    console.log( queryString );
+    pool.query( queryString ).then((results)=>{
+        res.sendStatus( 200 );
+    }).catch( (err)=>{
+        console.log( err );
+        res.sendStatus( 500 );
+    }) 
 });

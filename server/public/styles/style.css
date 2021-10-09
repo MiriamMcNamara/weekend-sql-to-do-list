@@ -23,7 +23,8 @@ table {
     border-style: solid;
     border-width: 3px;
     border-color: black; 
-   /*why won't table align center?*/
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #taskHeader {
@@ -37,3 +38,15 @@ th {
     border-color: black; 
     align-items: center;
 }
+
+/*
+.iconButton {
+    background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+    margin: 0 5px 0 5px;
+  }/*

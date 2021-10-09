@@ -73,7 +73,11 @@ PHASE FOUR: Complete (update) function/Toggle class
 
 PHASE FIVE: Delete function
 ===
-- capture delete button click (dynamically created) that deletes the row from the interface and sends an AJAX DELETE req to the server that deletes the task row from the database
+- add a delete button to the HTML in the GET, assign it a class
+- capture delete button click (dynamically created) in the onReady
+- create a function that sends an AJAX DELETE req to the server in the client using $(this).data( 'id' ) 
+- in the server, delete the task row from the database using req.query.id
+- get the updated array and displays it on the DOM
 - git commit
 
 FINAL PHASE of base mode:

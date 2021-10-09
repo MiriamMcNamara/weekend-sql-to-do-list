@@ -21,6 +21,19 @@ app.listen( port, ()=>{
 
 
 // routes
+app.delete( '/todo', ( req, res )=>{
+    console.log( 'DELETE route hit', req.query );
+    const queryString = `DELETE FROM to_do WHERE id='${req.query.id}'`;
+
+    console.log( queryString );
+    pool.query( queryString ).then((results)=>{
+        res.sendStatus( 200 );
+    }).catch( (err)=>{
+        console.log( err );
+        res.sendStatus( 500 );
+    }) 
+});
+
 app.get( '/todo', (req, res)=>{
     console.log( 'GET route hit');
     let queryString = 'SELECT * FROM to_do';

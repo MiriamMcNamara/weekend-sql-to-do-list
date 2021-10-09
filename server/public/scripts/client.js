@@ -1,9 +1,10 @@
 $( document ).ready( onReady );
 
 function onReady(){
-    $( `#addTaskButton` ).on( 'click', addTask );
     getTasks();
-}
+    $( `#addTaskButton` ).on( 'click', addTask );
+    $( `#viewTasks` ).on( 'click', `.deleteButton`, deleteTask );
+};
 
 function addTask(){
     console.log( 'in addTask' );
@@ -29,6 +30,19 @@ function addTask(){
 
 }; //end addTask
 
+function deleteTask(){
+    console.log( 'in deleteTask', $( this ).data( 'id' ) );
+//create a function that sends an AJAX DELETE 
+    //req to the server in the client using $(this).data( 'id' )
+    $.ajax({
+        method: 'DELETE',
+        url: '/todo?id=' + $( this ).data( 'id' )
+    }).then(function (response){
+        getTasks();
+    }).catch( function( err ){
+        console.log( 'problem deleting task!', err )
+    })}; //end deleteTask
+
 function getTasks(){
     $.ajax({
         method: 'GET',
@@ -41,9 +55,12 @@ function getTasks(){
       //loop through response
       //display in the table on the DOM
       for( let i=0; i<response.length; i++){
-          el.append( `<tr><td>${response[i].id}</td><td><input type="checkbox"></td><td>${response[i].item}</td></tr>`);
-      }
-    }).catch( function( err ){
+          el.append( `<tr>
+                        <td>${response[i].id}</td>
+                        <td><input type="checkbox"></td>
+                        <td>${response[i].item}</td>
+                        <td><button data-id='${response[i].id}' class="deleteButton">Delete</button></td>
+                    </tr>`);
+    }}).catch( function( err ){
         console.log( 'problem getting tasks!', err )
-    });
-}
+    })}; //end getTasks

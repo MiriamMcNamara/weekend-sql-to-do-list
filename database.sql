@@ -10,4 +10,4 @@ CREATE TABLE to_do (
 
 --optional test field
 INSERT INTO to_do ( "item", "completed" )
-VALUES ( 'finish weekend challenge to-do app', true );
+VALUES ( 'finish weekend challenge to-do app', false );

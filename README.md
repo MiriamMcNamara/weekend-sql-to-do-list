@@ -4,16 +4,22 @@ Mimi's Spectacular Digital To-Do List!
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
-
-A TO-DO LIST ABOUT MY TO-DO LIST
-
 TIME FRAME
 ===
 
 - Hoping to get the base mode completed by Saturday. I'll have 3-4 hours each day. I would love to spend Monday exploring Bootstrap, branching, and other stretch goals.
+
+Directly above this is how long it took you to develop the project. Your project description goes here. What problem did you solve? How did you solve it?
+
+## Screen Shot
+![Screenshot of ToDo List](ToDoAppScreenshot.png)
+
+## Prerequisites
+
+- Node.js
+- other things?
+
+## Installation
 
 PHASE ZERO
 ===
@@ -83,5 +89,23 @@ PHASE FIVE: Delete function
 FINAL PHASE of base mode:
 ===
 - update database.sql file if any changes were made
+- update the readme.md to get it ready to submit
+- clean up/add comments where necessary
 - clean up the CSS
 - git commit and submit assignment!
+
+## Usage
+
+User experience here
+
+## Built With
+
+Technologies and Frameworks
+
+## Acknowledgement
+
+I'd like to thank
+
+## Support
+
+Any issues, feel free to hit me up on Slack :)

@@ -58,8 +58,9 @@ app.post( '/todo', ( req, res )=>{
 
 app.put( '/todo', ( req, res )=>{
     console.log( 'PUT route hit', req.query );
-    const queryString = `UPDATE to_do SET completed=true WHERE id='${req.query.id}'`;
-
+    const queryString = `UPDATE to_do 
+    SET completed=true, time_completed=now()
+    WHERE id='${req.query.id}'`;
     console.log( queryString );
     pool.query( queryString ).then((results)=>{
         res.sendStatus( 200 );

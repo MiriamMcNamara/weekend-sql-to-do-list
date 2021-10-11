@@ -96,11 +96,26 @@ STRETCH GOAL 0: Bootstrap
 ===
 - I wanted to play around with Bootstrap but I got overwhelmed after watching a bunch of YouTube videos, go figure. :) I did not end up changing the styling of this project
 
-STRETCH GOAL 1: Add Delete Function Confirmation with SweetAlert
+STRETCH GOAL 1: Add Delete Function Confirmation with SweetAlert, and figure out branching!
 ===
 - add a delete confirmation to the delete button function by:
 - sourcing CDN in the HTML file
 - adding a swal.fire to the client.js with the AJAX Delete request nested inside of the swal code, so that it only sends the request if the user confirms that they really want to delete it
+- did my first branching on a project!
+
+STRETCH GOAL 2: Adding a timestamp to the Completed (update) feature
+===
+- figured out how to update two fields in an UPDATE
+- database can figure out timestamp! great. added a field in the table
+
+[] update the GET into include the new field!
+
+[] TO DO: I think the  timestamp would go into the tasks column. So, we would want to append more text to the line if the box is completed
+
+[] the timestamp is really not readable right now. Check out Amanda's code to see how she handled translating it
+
+[] TO DO : have the styling be different for the first half of the string and the second half (no strike-through for the timestamp)
+
 
 ## Usage
 
@@ -114,7 +129,7 @@ The user can add items to a to-do list that is displayed on the page, delete unw
 
 ## Acknowledgement
 
-I'd like to thank my cohort for the extra help, especially Amanda and Chris N for always giving me the right nudge or tip when I get stuck.
+I'd like to thank my cohort for the extra help along the way!
 
 ## Support
 

@@ -11,3 +11,7 @@ CREATE TABLE to_do (
 --optional test field
 INSERT INTO to_do ( "item", "completed" )
 VALUES ( 'finish weekend challenge to-do app', false );
+
+--if you are doing the timestamp branch:
+ALTER TABLE to_do
+ADD time_completed timestamp;

@@ -4,12 +4,9 @@ Mimi's Spectacular Digital To-Do List!
 
 ## Description
 
-TIME FRAME
-===
+- I completed the base mode in two days, about seven hours total. I wanted to spend any extra time I had Sunday and Monday exploring Bootstrap, branching, and other stretch goals.
 
-- Hoping to get the base mode completed by Saturday. I'll have 3-4 hours each day. I would love to spend Monday exploring Bootstrap, branching, and other stretch goals.
-
-Directly above this is how long it took you to develop the project. Your project description goes here. What problem did you solve? How did you solve it?
+- The base mode assignment was to create a to-do list that utilized the full stack, the full range of AJAX options (create, read, update, delete ), and the new SQL/database stuff we've been learning.
 
 ## Screen Shot
 ![Screenshot of ToDo List](ToDoAppScreenshot.png)
@@ -17,7 +14,6 @@ Directly above this is how long it took you to develop the project. Your project
 ## Prerequisites
 
 - Node.js
-- other things?
 
 ## Installation
 
@@ -27,8 +23,8 @@ PHASE ZERO
 - spend some time creating an epic to-do list about my to-do list to get organized and prioritize
 
 PHASE ONE: Basic Setup
-(I'd like to do all of this without copy/pasting so that I can get the placement of everything in my head a little better)
 ===
+(I tried to do as much as possible of this without copy/pasting so that I can get the placement of everything in my head a little better)
 
 - git init
 - npm init --y
@@ -96,15 +92,16 @@ FINAL PHASE of base mode:
 
 ## Usage
 
-User experience here
+The user can add items to a to-do list that is displayed on the page, delete unwanted items from the list, and mark items as completed.
 
 ## Built With
 
-Technologies and Frameworks
+- Express and PG
+- JQuery and SQL
 
 ## Acknowledgement
 
-I'd like to thank
+I'd like to thank my cohort for the extra help, especially Amanda and Chris N for always giving me the right nudge or tip when I get stuck.
 
 ## Support
 

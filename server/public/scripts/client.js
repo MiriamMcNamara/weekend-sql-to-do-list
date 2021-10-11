@@ -45,16 +45,39 @@ function completeTask(){
 
 function deleteTask(){
     console.log( 'in deleteTask', $( this ).data( 'id' ) );
-//create a function that sends an AJAX DELETE 
+
+    //create a swal that asks the user to confirm the delete; if they confirm, run the function
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You really wanted to do this thing!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+
+            // i think it would go here?
+            //create a function that sends an AJAX DELETE 
     //req to the server in the client using $(this).data( 'id' )
-    $.ajax({
-        method: 'DELETE',
-        url: '/todo?id=' + $( this ).data( 'id' )
-    }).then(function (response){
-        getTasks();
-    }).catch( function( err ){
-        console.log( 'problem deleting task!', err )
-    })}; //end deleteTask
+            $.ajax({
+                method: 'DELETE',
+                url: '/todo?id=' + $( this ).data( 'id' )
+            }).then(function (response){
+                getTasks();
+            }).catch( function( err ){
+                console.log( 'problem deleting task!', err )
+            });//end ajax req 
+          
+            Swal.fire(
+            'Deleted!',
+            'Your task has been deleted.',
+            'success'
+          )
+        }
+      })//end SweetAlert
+}; //end deleteTask
 
 function getTasks(){
     $.ajax({

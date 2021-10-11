@@ -14,6 +14,8 @@ Mimi's Spectacular Digital To-Do List!
 ## Prerequisites
 
 - Node.js
+- install express and PG
+- database and table created according to the database.sql file
 
 ## Installation
 
@@ -97,7 +99,7 @@ The user can add items to a to-do list that is displayed on the page, delete unw
 ## Built With
 
 - Express and PG
-- JQuery and SQL
+- Javascript, JQuery and SQL
 
 ## Acknowledgement
 

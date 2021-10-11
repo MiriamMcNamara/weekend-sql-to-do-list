@@ -92,6 +92,16 @@ FINAL PHASE of base mode:
 - clean up the CSS
 - git commit and submit assignment!
 
+STRETCH GOAL 0: Bootstrap
+===
+- I wanted to play around with Bootstrap but I got overwhelmed after watching a bunch of YouTube videos, go figure. :) I did not end up changing the styling of this project
+
+STRETCH GOAL 1: Add Delete Function Confirmation with SweetAlert
+===
+- add a delete confirmation to the delete button function by:
+- sourcing CDN in the HTML file
+- adding a swal.fire to the client.js with the AJAX Delete request nested inside of the swal code, so that it only sends the request if the user confirms that they really want to delete it
+
 ## Usage
 
 The user can add items to a to-do list that is displayed on the page, delete unwanted items from the list, and mark items as completed.
@@ -100,6 +110,7 @@ The user can add items to a to-do list that is displayed on the page, delete unw
 
 - Express and PG
 - Javascript, JQuery and SQL
+- SweetAlerts
 
 ## Acknowledgement
 

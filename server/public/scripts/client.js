@@ -93,19 +93,45 @@ function getTasks(){
       for( let i=0; i<response.length; i++){
           if( response[i].completed === false ){
           el.append( `<tr>
-                        <td>${response[i].id}</td>
                         <td><button data-id='${response[i].id}' class="uncompleteButton"><img class="no" src="./images/no.png"/></button></td>
                         <td class="taskToComplete">${response[i].item}</td>
                         <td><button data-id='${response[i].id}' class="deleteButton">Delete</button></td>
                     </tr>`)}
         else{
+            let prettyTime = {
+                year: '',
+                month: '',
+                day: '',
+                hour: '',
+                minute: ''
+            };
+            for ( let j=0; j<response[i].time_completed.length; j++){
+                if ( j<4 ){
+                    prettyTime.year += response[i].time_completed[j]
+                }
+                else if ( j>4 && j<7 ){
+                    prettyTime.month += response[i].time_completed[j]
+                }
+                else if ( j>7 && j<10 ){
+                    prettyTime.day += response[i].time_completed[j]
+                }
+                else if ( j>10 && j<13 ){
+                    prettyTime.hour += response[i].time_completed[j];
+                }
+                else if ( j>13 && j<16 ){
+                    prettyTime.minute += response[i].time_completed[j]
+                };
+            };
             el.append( `<tr>
-                        <td>${response[i].id}</td>
                         <td><button data-id='${response[i].id}' class="completeButton"><img class="yay" src="./images/yay.jpg"/></button></td>
-                        <td class="taskCompleted">${response[i].item}</td>
-                        <td><button data-id='${response[i].id}' class="deleteButton">Delete</button></td>
+                        <td class="taskCompleted">${response[i].item}<td><button data-id='${response[i].id}' class="deleteButton">Delete</button></td>
+                        </tr>
+                        <tr>
+                        <td></td>
+                        <td class="timeCompleted">completed on ${prettyTime.month}/${prettyTime.day}/${prettyTime.year} at ${prettyTime.hour}:${prettyTime.minute}</td>
+                        <td></td>
                     </tr>`)
-        }
+        }//end else
     }}).catch( function( err ){
         console.log( 'problem getting tasks!', err )
     })}; //end getTasks

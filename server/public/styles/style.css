@@ -84,3 +84,7 @@ th {
     padding: 5px;
     width: 50px;
   }
+
+  .timeCompleted {
+      color: lightskyblue;
+  }

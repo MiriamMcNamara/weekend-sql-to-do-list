@@ -36,7 +36,7 @@ app.delete( '/todo', ( req, res )=>{
 
 app.get( '/todo', (req, res)=>{
     console.log( 'GET route hit');
-    let queryString = 'SELECT * FROM to_do ORDER BY id ASC';
+    let queryString = 'SELECT * FROM to_do ORDER BY completed ASC';
     pool.query( queryString ).then( (results)=>{
         console.log( results.rows );
         res.send( results.rows )

@@ -107,14 +107,9 @@ STRETCH GOAL 2: Adding a timestamp to the Completed (update) feature
 ===
 - figured out how to update two fields in an UPDATE
 - database can figure out timestamp! great. added a field in the table
-
-[] update the GET into include the new field!
-
-[] TO DO: I think the  timestamp would go into the tasks column. So, we would want to append more text to the line if the box is completed
-
-[] the timestamp is really not readable right now. Check out Amanda's code to see how she handled translating it
-
-[] TO DO : have the styling be different for the first half of the string and the second half (no strike-through for the timestamp)
+- In the client getTasks function, there is already an if statement based on whether the completed is true or false, use that to append.
+- The timestamp is really not readable as created by the database. Chatted with Chris to see how he translated it in the client to display better on the DOM using an object and another loop which worked well. I struggled and eventually gave up with the timezone situation (although it displays as CDT in my database, it shows up at UTC in the server!) due to time constraints.
+- Ended up appending as a second <tr></tr> so that it appeared below the completed task.
 
 
 ## Usage

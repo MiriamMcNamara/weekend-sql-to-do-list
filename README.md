@@ -4,7 +4,7 @@ Mimi's Spectacular Digital To-Do List!
 
 ## Description
 
-- I completed the base mode in two days, about seven hours total. I wanted to spend any extra time I had Sunday and Monday exploring Bootstrap, branching, and other stretch goals.
+- I completed the base mode in two days, about seven hours total. I wanted to spend any extra time I had Sunday and Monday exploring Bootstrap, branching, and other stretch goals. Although I spent some time exploring Bootstrap, I did not end up changing my styling and instead did two of the other stretch goals, the addition of the timestamp to completed tasks, and a SweetAlert popup to get confirmation when the delete button is hit. The screenshot in this readme reflects the base mode, not the stretch goals. 
 
 - The base mode assignment was to create a to-do list that utilized the full stack, the full range of AJAX options (create, read, update, delete ), and the new SQL/database stuff we've been learning.
 

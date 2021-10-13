@@ -4,7 +4,7 @@ Mimi's Spectacular Digital To-Do List!
 
 ## Description
 
-- I completed the base mode in two days, about seven hours total. I wanted to spend any extra time I had Sunday and Monday exploring Bootstrap, branching, and other stretch goals.
+- I completed the base mode in two days, about seven hours total. I wanted to spend any extra time I had Sunday and Monday exploring Bootstrap, branching, and other stretch goals. Although I spent some time exploring Bootstrap, I did not end up changing my styling and instead did two of the other stretch goals, the addition of the timestamp to completed tasks, and a SweetAlert popup to get confirmation when the delete button is hit. The screenshot in this readme reflects the base mode, not the stretch goals.
 
 - The base mode assignment was to create a to-do list that utilized the full stack, the full range of AJAX options (create, read, update, delete ), and the new SQL/database stuff we've been learning.
 
@@ -14,6 +14,8 @@ Mimi's Spectacular Digital To-Do List!
 ## Prerequisites
 
 - Node.js
+- install express and PG
+- database and table created according to the database.sql file
 
 ## Installation
 
@@ -90,6 +92,26 @@ FINAL PHASE of base mode:
 - clean up the CSS
 - git commit and submit assignment!
 
+STRETCH GOAL 0: Bootstrap
+===
+- I wanted to play around with Bootstrap but I got overwhelmed after watching a bunch of YouTube videos, go figure. :) I did not end up changing the styling of this project
+
+STRETCH GOAL 1: Add Delete Function Confirmation with SweetAlert, and figure out branching!
+===
+- add a delete confirmation to the delete button function by:
+- sourcing CDN in the HTML file
+- adding a swal.fire to the client.js with the AJAX Delete request nested inside of the swal code, so that it only sends the request if the user confirms that they really want to delete it
+- did my first branching on a project!
+
+STRETCH GOAL 2: Adding a timestamp to the Completed (update) feature
+===
+- figured out how to update two fields in an UPDATE
+- database can figure out timestamp! great. added a field in the table
+- In the client getTasks function, there is already an if statement based on whether the completed is true or false, use that to append.
+- The timestamp is really not readable as created by the database. Chatted with Chris to see how he translated it in the client to display better on the DOM using an object and another loop which worked well. I struggled and eventually gave up with the timezone situation (although it displays as CDT in my database, it shows up at UTC in the server!) due to time constraints.
+- Ended up appending as a second <tr></tr> so that it appeared below the completed task.
+
+
 ## Usage
 
 The user can add items to a to-do list that is displayed on the page, delete unwanted items from the list, and mark items as completed.
@@ -97,11 +119,12 @@ The user can add items to a to-do list that is displayed on the page, delete unw
 ## Built With
 
 - Express and PG
-- JQuery and SQL
+- Javascript, JQuery and SQL
+- SweetAlerts
 
 ## Acknowledgement
 
-I'd like to thank my cohort for the extra help, especially Amanda and Chris N for always giving me the right nudge or tip when I get stuck.
+I'd like to thank my cohort for the extra help along the way!
 
 ## Support
 

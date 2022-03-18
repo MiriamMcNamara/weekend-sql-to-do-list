@@ -125,7 +125,3 @@ The user can add items to a to-do list that is displayed on the page, delete unw
 ## Acknowledgement
 
 I'd like to thank my cohort for the extra help along the way!
-
-## Support
-
-Any issues, feel free to hit me up on Slack :)
